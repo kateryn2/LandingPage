@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/solid.css" integrity="sha384-HTDlLIcgXajNzMJv5hiW5s2fwegQng6Hi+fN6t5VAcwO/9qbg2YEANIyKBlqLsiT" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title> Promoción</title>
+    <hr />
+ <h1 class="text-center"><strong>Súper promoción</strong> <i class="fas fa-utensils"></i></h1>
+<hr />
+</head>
+<body >
+	    <div id="general1" >
+	<h2>Llena este formulario para que ganes un descuento del <strong>50%</strong>  en cualquiera de los deliciosos platos del menú, además, si lo imprimes llevarás gratis un delicioso wafle de tres pisos de crema Jet con helado de chocolate... ¡Anímate!, te estamos esperando <i class="fas fa-smile"></i></h2>
+	<div id="input" >
+	<h4>Nombre <i class="fas fa-user"></i></h4>
+	<input type="name"  class="form-control" name="name"> 
+    <h4>Correo <i class="fas fa-envelope"></i></h4>
+	<input type="email"  class="form-control" name="email" >
+
+	</div>
+	<div id="boton">
+		<table>
+	<tr>
+	
+	<td><input  type="SUBMIT"  value=" Enviar " class="btn btn-danger" onclick="return datos() " ></td>
+    <td><input type="SUBMIT" value="Imprimir" class="btn btn-success" onclick="return imprimir()" ></td>
+
+	
+	</tr>
+	</table>
+</div>
+
+<script language="JavaScript">
+
+// JS
+var da = (document.all) ? 1 : 0;
+var pr = (window.print) ? 1 : 0;
+var win = (navigator.userAgent.indexOf("window") != -1); 
+
+function imprimir() {
+  if (pr) // NS4, IE5
+    window.print()
+  else if (da && !win) // IE4 (Windows)
+    vbPrintPage()
+  else // other browsers
+    alert("No soportado por este navegador");
+  return false;
+}
+function datos() {
+  finalMessage = 'Los datos han sido enviados. ';
+}
+
+if (da && !pr && !win) with (document) {
+  writeln('<OBJECT ID="WB" WIDTH="0" HEIGHT="0" CLASSID="clsid:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>');
+  writeln('<' + 'SCRIPT LANGUAGE="VBScript">');
+  writeln('Sub window_onunload');
+  writeln('  On Error Resume Next');
+  writeln('  Set WB = nothing');
+  writeln('End Sub');
+  writeln('Sub vbPrintPage');
+  writeln('  OLECMDID_PRINT = 6');
+  writeln('  OLECMDEXECOPT_DONTPROMPTUSER = 2');
+  writeln('  OLECMDEXECOPT_PROMPTUSER = 1');
+  writeln('  On Error Resume Next');
+  writeln('  WB.ExecWB OLECMDID_PRINT, OLECMDEXECOPT_DONTPROMPTUSER');
+  writeln('End Sub');
+  writeln('<' + '/SCRIPT>');
+}
+</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+
+</body>

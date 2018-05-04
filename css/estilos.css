@@ -1,0 +1,74 @@
+hr {
+      width:960px;
+      height:3px;  
+   background-color:#000000;
+ } 
+
+ .imagen1 { 
+ 	padding: 5px;
+ 	 margin: 5px; 
+ 	 border: 2px solid black; 
+ 	 float: left;
+ 	  width: 100px; 
+ 	  border-color: #000000;
+     border-image:  solid;
+ 	}
+ 	 #columnas{
+   column-count:4;
+   column-gap:20px;
+   column-rule:4px dotted gray;
+    list-style: none;
+}
+#general{
+margin: auto;
+margin-top: 50px;
+width: 960px;
+height: 800px;
+background-color: white;
+}
+#general1{
+margin: auto;
+margin-top: 50px;
+width: 960px;
+height: 500px;
+background-color: #FBEFEF;
+border-color: #000000;
+border-style: solid;
+}
+#landing{
+	margin-top: 30px;
+	float:center;
+	width: 960px;
+	height: 230px;
+	background-color: #FF0000;
+	border-color: #000000;
+border-style: solid;
+}
+
+ a{
+   text-decoration:none;
+   font-size:50px;
+   font-family: fantasy;
+   width: 300px;
+   margin: 0 auto; 
+   height: 100px;
+   margin-left: auto;
+  position: center;
+  }
+
+  #boton{
+  	margin-top: 0px;
+  	margin: 0 auto;
+  	float:center;
+  	width: 150px;
+	height: 200px;
+
+  }
+  
+   
+  #input{
+  	margin: auto;
+  	float:center;
+  	width: 200px;
+	height: 180px;
+  }
